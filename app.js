@@ -7,6 +7,8 @@ import connectDB from "./Config/db.js";
 
 const app = express()
 
+const PORTNO = PORT || 5000
+
 app.use(json());
 app.use(urlencoded({extended:true}));
 app.use(cookieParser());
@@ -31,7 +33,7 @@ app.use(
     res.send("hello to the skechkingston")
 })
 
-  app.listen(PORT, () => {
+  app.listen(PORTNO, () => {
      connectDB()
      console.log(`server running on port http://localhost:${PORT}`); 
   })
