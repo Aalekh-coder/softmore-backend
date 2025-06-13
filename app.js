@@ -7,7 +7,9 @@ import connectDB from "./Config/db.js";
 
 const app = express()
 
-const PORTNO = PORT || 5000
+const PORTNO = PORT || 5000;
+
+
 
 app.use(json());
 app.use(urlencoded({extended:true}));
